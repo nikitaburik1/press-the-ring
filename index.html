@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сюрприз</title>
+    <title>Колечко</title>
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
+        
+        .text-overlay {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .ring-text {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+        }
+        
         a img {
             border: none;
             max-width: 300px;
             cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        a img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
+    <div class="text-overlay">
+        <div class="ring-text">Нажми на колечко</div>
+    </div>
+    
     <a href="surprise.html">
-        <img src="ringring2.jpg">
+        <img src="ringring2.jpg" alt="Колечко">
     </a>
 </body>
-</html> 
+</html>
+
+
+
+
